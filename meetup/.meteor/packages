@@ -5,6 +5,9 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 iron:router
+accounts-password
+twbs:bootstrap
+ian:accounts-ui-bootstrap-3
+raix:handlebar-helpers
+underscore
