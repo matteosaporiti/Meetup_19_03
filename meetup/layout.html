@@ -3,32 +3,58 @@
 </head>
 
 <body>
+<div class="page-container">
     {{> layout}}
+</div>
 </body>
 
 
-<template name="layout">
-  {{> loginButtons}}
-
-    <div class="main">
-        <h1>Benvenuti</h1>
-
-        <p><a href="../ex1">ex1</a> - <a href="../ex2">ex2</a> - <a href="../ex3">ex3</a> - <a href="../ex4">ex4</a> - <a href="../ex5">ex5</a></p>
-
-        {{#if isExample1}}
-            {{> example1}}
-        {{/if}}
-        {{#if isExample2}}
-            {{> example2}}
-        {{/if}}
-        {{#if isExample3}}
-            {{> example3}}
-        {{/if}}
-        {{#if isExample4}}
-            {{> example4}}
-        {{/if}}
-        {{#if isExample5}}
-            {{> example5}}
-        {{/if}}
+<template name="layout">	<!-- top navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                {{> loginButtons}}
+            </div>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <!-- sidebar -->
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+                <div data-offset-top="45" data-offset-bottom="90">
+                    <ul class="nav" id="sidebar-nav">
+                        <li><a href="../ex1">ex1</a></li>
+                        <li><a href="../ex2">ex2</a></li>
+                        <li><a href="../ex3">ex3</a></li>
+                        <li><a href="../ex4">ex4</a></li>
+                        <li><a href="../ex5">ex5</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- main area -->
+            <div class="col-xs-12 col-sm-9">
+                <h1>Meetup 19/03/2015</h1>
+
+                {{#if isExample1}}
+                    {{> example1}}
+                {{/if}}
+                {{#if isExample2}}
+                    {{> example2}}
+                {{/if}}
+                {{#if isExample3}}
+                    {{> example3}}
+                {{/if}}
+                {{#if isExample4}}
+                    {{> example4}}
+                {{/if}}
+                {{#if isExample5}}
+                    {{> example5}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
 </template>
