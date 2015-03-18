@@ -1,7 +1,7 @@
-Template.example5.created = function(){
+Template.example5.onCreated(function(){
     "use strict";
     Meteor.subscribe('posts5');
-}
+});
 
 Template.example5.helpers({
     posts: function(){
